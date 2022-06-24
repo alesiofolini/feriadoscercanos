@@ -2,7 +2,7 @@ const year = new Date().getFullYear();
 
 // api url
 const api_url =
-	"http://nolaborables.com.ar/api/v2/feriados/"+year;
+	"https://nolaborables.com.ar/api/v2/feriados/"+year;
 	
 	
 const diasem = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
