@@ -5,7 +5,7 @@ const api_url =
 	"https://nolaborables.com.ar/api/v2/feriados/"+year;
 	
 	
-const diasem = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+const diasem = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
 // Defining async function
 async function getapi(url) {
@@ -32,10 +32,13 @@ function hideloader() {
 // Function to define innerHTML for HTML table
 function show(data) {
 	let tab =
-		`<tr>
-		<th>Motivo</th>
-		<th>Fecha</th>
-		</tr>`;
+		`<thead>
+			<tr>
+			<th>Motivo</th>
+			<th>Fecha</th>
+			</tr>
+		</thead>
+		<tbody>`;
 	
 	let date = new Date();
 	let month = date.getMonth();
@@ -46,11 +49,11 @@ function show(data) {
 		let fechaferiado = new Date(2022, data[r].mes-1, data[r].dia)
 		let diffTime = Math.abs(fechaferiado - date);
 		let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-		let diasemana = diasem[fechaferiado.getDay()-1];
+		let diasemana = diasem[fechaferiado.getDay()];
 		if (diffDays <= 7) {
 			tab += `<tr>
-				<td style="color:red;">${data[r].motivo} </td>
-				<td style="color:red;">${diasemana} ${data[r].dia}/${data[r].mes}</td>
+				<td>${data[r].motivo} </td>
+				<td>${diasemana} ${data[r].dia}/${data[r].mes}</td>
 				</tr>`;
 		}
 		/* else {
@@ -60,6 +63,11 @@ function show(data) {
 				</tr>`;
 		} */
 	}
+	tab += `</tbody>
+			<tfoot>
+				<tr>
+				</tr>
+			</tfoot>`;
 	
 	
 	

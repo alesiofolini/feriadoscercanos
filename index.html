@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="es-ar">
+<html lang="es-ar" data-theme="dark">
 	<head>
 		<link rel="stylesheet" href="style.css" />
 		<meta charset="UTF-8" />
 		<meta name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Feriados Cercanos</title>
+		<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
 	</head>
 	<body>
-		<h1 id="titulo">Feriados Cercanos</h1>
-		<!-- Here a loader is created which
-			loads till response comes -->
-		<div class="d-flex justify-content-center">
-			<div class="spinner-border"
-				role="status" id="loading">
-				<span class="sr-only">Cargando...</span>
+		<main class="container">
+			<h1 id="titulo">Feriados Cercanos</h1>
+			<!-- Here a loader is created which
+				loads till response comes -->
+			<div class="d-flex justify-content-center">
+				<div class="spinner-border"
+					role="status" id="loading">
+					<span class="sr-only">Cargando...</span>
+				</div>
 			</div>
-		</div>
-		<!-- table for showing data -->
-		<table id="feriados"></table>
-		<script src="script.js"></script>
-		</br>
-		</br>
-		</br>
-		<a href='https://cafecito.app/alesiofolini' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_3.png' alt='Invitame un café en cafecito.app' /></a>
+			<!-- table for showing data -->
+			<table id="feriados"></table>
+			<script src="script.js"></script>
+			</br>
+			</br>
+			</br>
+			<a href='https://cafecito.app/alesiofolini' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_3.png' alt='Invitame un café en cafecito.app' /></a>
+		</main>
 	</body>
 </html>
