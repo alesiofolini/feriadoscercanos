@@ -46,7 +46,7 @@ function show(data) {
 	
 	// Loop to access all rows
 	for (let r of Object.keys(data)) {
-		let fechaferiado = new Date(2022, data[r].mes-1, data[r].dia)
+		let fechaferiado = new Date(year, data[r].mes-1, data[r].dia)
 		let diffTime = Math.abs(fechaferiado - date);
 		let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 		let diasemana = diasem[fechaferiado.getDay()];
