@@ -11,7 +11,7 @@ const diasem = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes',
 async function getapi(url) {
 	
 	// Storing response
-	const response = await fetch(url);
+	const response = await fetch(url, { mode: 'no-cors'});
 	
 	// Storing data in form of JSON
 	var data = await response.json();
