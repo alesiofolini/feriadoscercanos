@@ -23,7 +23,7 @@ async function getapi(url) {
 	show(data);
 }
 // Calling that async function
-getapi(api_url);
+//getapi(api_url);
 
 // Function to hide the loader
 function hideloader() {
